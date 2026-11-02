@@ -67,6 +67,7 @@ body {
   padding: 0;
   border: none;
   min-inline-size: 0;
+  min-width: 0;
 }
 
 .field-label {
@@ -139,10 +140,20 @@ body {
   gap: 12px;
 }
 
+/* 窄屏（手机竖屏）下日期与备注改为上下排列，避免两列挤在一起导致错位/重叠 */
+@media (max-width: 480px) {
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
 .date-input,
 .note-input {
   width: 100%;
   min-width: 0;
+  max-width: 100%;
+  height: 44px;
   border: 1.5px solid var(--border);
   border-radius: 10px;
   padding: 10px 12px;

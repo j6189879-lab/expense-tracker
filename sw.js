@@ -1,5 +1,5 @@
 /* 极简 Service Worker：缓存核心文件，保证打开过之后断网仍能加载页面。 */
-const CACHE_NAME = 'expense-tracker-v5';
+const CACHE_NAME = 'expense-tracker-v6';
 const CORE_ASSETS = [
   './',
   './index.html',
