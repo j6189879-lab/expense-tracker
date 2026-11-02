@@ -166,6 +166,15 @@ body {
 .date-input:focus,
 .note-input:focus { border-color: var(--accent); }
 
+/* 日期输入框：去掉浏览器/系统原生的日期控件外观。
+   原生控件自带「最小宽度」（日期占位 + 日历图标），在真机上会撑破 width:100% 导致超出页面；
+   appearance:none 后它变成普通文本框，完全受 CSS 控制，点它仍会弹出日期选择器。 */
+.date-input {
+  display: block;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 /* 备注快捷标签 */
 .note-tags {
   display: flex;
